@@ -1,10 +1,10 @@
 
-def find_position(line, num_unique):
-    for i in range(num_unique, len(line)):
+def find_position(line, window_size):
+    for i in range(window_size, len(line)):
         S = set()
-        for j in range(1, num_unique+1):
+        for j in range(1, window_size+1):
             S.add(line[i-j])
-        if len(S) == num_unique:
+        if len(S) == window_size:
             return i
 
 
